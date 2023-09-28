@@ -1,6 +1,6 @@
 # Ruttl Bug Tracking WordPress Plugin
 
-![Version](https://img.shields.io/badge/version-1.0.0-green)
+![Version](https://img.shields.io/badge/version-1.0.1-green)
 ![WordPress Version](https://img.shields.io/badge/WordPress-%3E=6.0-blue)
 ![PHP Version](https://img.shields.io/badge/PHP-%3E=8.0-blue)
 

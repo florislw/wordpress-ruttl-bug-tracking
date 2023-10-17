@@ -1,6 +1,6 @@
 # Ruttl Bug Tracking WordPress Plugin
 
-![Version](https://img.shields.io/badge/version-1.0.1-green)
+![Version](https://img.shields.io/badge/version-1.0.2-green)
 ![WordPress Version](https://img.shields.io/badge/WordPress-%3E=6.0-blue)
 ![PHP Version](https://img.shields.io/badge/PHP-%3E=8.0-blue)
 
@@ -8,50 +8,53 @@
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-## Table of Contents
+**This is an unofficial plugin and is in no way related to ruttl.**
 
-1. [Description](#description)
-2. [Installation](#installation)
-3. [Features](#features)
-4. [FAQs](#faqs)
-5. [Changelog](#changelog)
-6. [License](#license)
+Integrate the Ruttl bug tracking script effortlessly into your WordPress website.
 
 ## Description
 
-The **Ruttl Bug Tracking** plugin enables seamless integration of the Ruttl bug tracking system with your WordPress
-website. The primary focus of this plugin is to facilitate better bug reporting, tracking, and resolution within your
-WordPress environment.
+The **Ruttl Bug Tracking** plugin provides a seamless way to embed the Ruttl bug tracking system into your WordPress
+platform.
 
-### Purpose
+### Features:
 
-- **Enhanced Debugging**: Make debugging easier by capturing bugs right from your website.
-- **User-Friendly**: Simple setup that doesn't require coding skills.
-- **Transparency**: Optionally, allow only logged-out users to access the bug tracker.
+- Quick and easy setup of Ruttl Bug Tracking for your WordPress.
+- Option to exclude the Bug Tracker for guests (logged-out users).
+- Conditional inclusion or exclusion capability with a filter.
 
-## Installation
+## Documentation for Developers
 
-1. Upload the plugin to your WordPress plugins folder.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Navigate to 'Settings' > 'Ruttl Bug Tracking Settings' to configure.
+### `flvl_ruttl_bug_tracking/include_ruttl` Filter
 
-## Features
+This filter enables developers to programmatically decide the inclusion of the Ruttl bug tracking. As a default
+behavior, the admin area does not incorporate the Ruttl bug tracking.
 
-- **Simple Configuration**: Quickly set up Ruttl Bug Tracking on your WordPress site.
-- **Guest Filtering**: Ability to include the bug tracker only for logged-in users.
-- **Filter Support**: Optional inclusion/exclusion through a WordPress filter for advanced usage.
+```php
+add_filter( 'flvl_ruttl_bug_tracking/include_ruttl', function( $include ){
+    $include = // your logic here
+    
+    return $include;
+});
+```
 
-## FAQs
+## Frequently Asked Questions
 
 ### How do I set the Project ID?
 
-Go to 'Settings' > 'Ruttl Bug Tracking Settings' in your WordPress dashboard and enter your Project ID.
+Go to 'Settings' > 'Ruttl Bug Tracking Settings' and enter your Project ID.
 
-### Where can I find my Project ID?
+### How can I locate my Project ID?
 
-Log in to your Ruttl account, navigate to your project. The Project ID can be found as the last segment in the URL.
+Sign in to your Ruttl account and proceed to the specific project you wish to integrate with your WordPress site. The
+Project ID is the concluding segment of the URL. As an illustration, for the URL `https://web.ruttl.com/project/12345`,
+the Project ID would be `12345`.
 
 ## Changelog
+
+### 1.0.2
+
+- Security: Escape output of the Project ID.
 
 ### 1.0.0
 

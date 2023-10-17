@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name:       Ruttl Bug Tracking
+ * Plugin Name:       FLVL Ruttl Bug Tracking
  * Description:       Add the ruttl bug tracking script to any part of your website.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Floris van Leeuwen
@@ -64,7 +64,7 @@ function flvl_ruttl_bug_tracking_show_admin_notice(): void {
 		'<div class="notice notice-error"><p>%s</p></div>',
 		sprintf(
 			__( 'Please set the Ruttl Bug Tracking Project ID on the <a href="%s">settings page</a>.', 'flvl-ruttl-bug-tracking' ),
-			$settings_url
+			esc_url( $settings_url )
 		)
 	);
 }
@@ -117,6 +117,6 @@ function flvl_ruttl_bug_tracking_script(): void {
 
 	echo sprintf(
 		'<script id="ruttl-site-embed-script" src="https://app.ruttl.com/plugin.js?id=%s&e=1" defer async></script>',
-		$project_id
+		esc_attr( $project_id )
 	);
 }

@@ -147,7 +147,7 @@ class Flvl_Ruttl_Bug_Tracking_Settings {
         <input type="checkbox" name="<?= self::OPTION_NAME; ?>[include_only_logged_in]"
                value="1" <?= checked( $value ?? '', '1' ); ?>>
         <p class="description">
-			<?= esc_html__( 'If checked, the tool is only displayed for logged in users.', self::PAGE_SLUG ); ?>
+			<?= esc_html__( 'If checked, the tool is only displayed to logged in users.', self::PAGE_SLUG ); ?>
         </p>
 		<?php
 	}

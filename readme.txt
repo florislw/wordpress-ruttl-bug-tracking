@@ -2,7 +2,7 @@
 Contributors: florislw
 Tags: bug tracking, ruttl, wordpress, plugin
 Requires at least: 6.0
-Tested up to: 6.0
+Tested up to: 6.4
 Stable tag: 1.0.2
 Requires PHP: 8.0
 License: GPLv2 or later
@@ -49,6 +49,10 @@ Project ID is the concluding segment of the URL. As an illustration, for the URL
 the Project ID would be `12345`.
 
 == Changelog ==
+
+= 1.0.3 =
+* Declare compatibility with WordPress 6.4.
+* Remove PHP short tags.
 
 = 1.0.2 =
 * Security: Escape output of the Project ID.

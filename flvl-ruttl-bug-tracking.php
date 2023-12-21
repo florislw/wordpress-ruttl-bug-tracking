@@ -2,21 +2,20 @@
 /*
  * Plugin Name:       FLVL Ruttl Bug Tracking
  * Description:       Add the ruttl bug tracking script to any part of your website.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Floris van Leeuwen
  * Author URI:        https://flvl.nl/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Update URI:        https://example.com/my-plugin/
  * Text Domain:       flvl-ruttl-bug tracking
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-const FLVL_RUTTL_BUGTRACKING_VERSION     = '1.0.1';
+const FLVL_RUTTL_BUGTRACKING_VERSION     = '1.0.3';
 const FLVL_RUTTL_BUGTRACKING_PLUGIN_FILE = __FILE__;
 
 /*

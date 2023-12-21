@@ -52,6 +52,11 @@ the Project ID would be `12345`.
 
 ## Changelog
 
+### 1.0.3
+
+- Declare compatibility with WordPress 6.4.
+- Remove PHP short tags.
+
 ### 1.0.2
 
 - Security: Escape output of the Project ID.

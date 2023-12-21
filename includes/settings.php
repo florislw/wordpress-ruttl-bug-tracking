@@ -59,7 +59,7 @@ class Flvl_Ruttl_Bug_Tracking_Settings {
 	public function render_settings_page(): void {
 		?>
         <div class="wrap">
-            <h1><?= esc_html__( 'Ruttl Bug Tracking', self::PAGE_SLUG ); ?></h1>
+            <h1><?php echo esc_html__( 'Ruttl Bug Tracking', self::PAGE_SLUG ); ?></h1>
             <form action="options.php" method="post">
 				<?php
 				settings_fields( self::PAGE_SLUG );
@@ -125,10 +125,10 @@ class Flvl_Ruttl_Bug_Tracking_Settings {
 	public function render_project_id_field(): void {
 		$value = self::get_setting( 'project_id' );
 		?>
-        <input type="text" name="<?= self::OPTION_NAME; ?>[project_id]"
-               value="<?= esc_attr( $value ) ?>">
+        <input type="text" name="<?php echo self::OPTION_NAME; ?>[project_id]"
+               value="<?php echo esc_attr( $value ) ?>">
         <p class="description">
-			<?= esc_html__( 'The project ID can be found in the Ruttl dashboard URL.', self::PAGE_SLUG ); ?>
+			<?php echo esc_html__( 'The project ID can be found in the Ruttl dashboard URL.', self::PAGE_SLUG ); ?>
         </p>
 		<?php
 	}
@@ -144,10 +144,10 @@ class Flvl_Ruttl_Bug_Tracking_Settings {
 		$value = self::get_setting( 'include_only_logged_in' );
 
 		?>
-        <input type="checkbox" name="<?= self::OPTION_NAME; ?>[include_only_logged_in]"
-               value="1" <?= checked( $value ?? '', '1' ); ?>>
+        <input type="checkbox" name="<?php echo self::OPTION_NAME; ?>[include_only_logged_in]"
+               value="1" <?php echo checked( $value ?? '', '1' ); ?>>
         <p class="description">
-			<?= esc_html__( 'If checked, the tool is only displayed to logged in users.', self::PAGE_SLUG ); ?>
+			<?php echo esc_html__( 'If checked, the tool is only displayed to logged in users.', self::PAGE_SLUG ); ?>
         </p>
 		<?php
 	}
